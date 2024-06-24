@@ -35,18 +35,20 @@ def eliminar_libro():
     if not libros:
         print("No hay libros en la libreria")
     else:
-        print("A seleccionado eliminar un libro")
-        for i in libros:
-            libro=input("Ingresa el libro que desea eliminar: ").lower()
-            if libro in libros:
-                libros.remove(libro)
-                del(libro)
+        libro_a_eliminar = "Harry Potter"
+    if libro_a_eliminar in libros:
+    libros.remove(libro_a_eliminar)
+    else:
+    print(f"El libro '{libro_a_eliminar}' no está en la lista.")
              
 
 def guardar_archivo():
     if not libros:
         print("No hay libros en la libreria")
-        return
+    else:
+        with open('Calfun_Francisco_FPY1101_002D/planilla libros','w',encoding='utf-8') as archivo:
+            archivo.write(libros)
+        
     
                 
             
