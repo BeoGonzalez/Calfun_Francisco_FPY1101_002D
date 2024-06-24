@@ -1,5 +1,4 @@
 #ingresar libreria
-import csv
 import time
 import funcionesPython as funcion
 #Hecho por Benjamin Montoya, Vicente Ruiz y Benjamín Gonzalez
