@@ -1,16 +1,18 @@
+#Funciones hechas por Benjamin Montoya, Vicente Ruiz y Benjamín Gonzalez
+#Funcion para agregar libros  
 libros=[]
-#Funcion para agregar libros
+
 def agregar_libro():
     print("A seleccionado agregar un libro")
     libro=input("Escriba el libro que desea agregar---> ")
     autor=input("Ingrese el autor--->")
-    año=input("Ingresa el año de publicación del libro: ")
-    titulo={'TITULO':libro}
-    nombre={'AUTOR':autor}
-    fecha={'AÑO DE PUBLICACION':año}
-    libros.insert(0,0,titulo)
-    libros.insert(1,0,nombre)
-    libros.insert(2,0,fecha)
+    año=input("Ingresa el año de publicación del libro---> ")
+    genero=input("Ingrese el genero del libro---> ")
+    titulo={'TITULO':libro,
+            'AUTOR':autor,
+            'AÑO DE PUBLICACION':año,
+            'GENERO':genero}
+    libros.append(titulo)
 
     
 
@@ -24,15 +26,29 @@ def modificar_libro():
     if not libros:
         print("No hay libros en la libreria")
     else:
-        print("A seleccionado modificar un libro")    
+        print("A seleccionado modificar un libro")
+        modificar=input("¿Cual libro desea modificar? ")
+        if modificar in libros:
+            opcion=int(input("¿Que desea modificar?\n1)Libro\n2)"))
 
 def eliminar_libro():
     if not libros:
         print("No hay libros en la libreria")
     else:
         print("A seleccionado eliminar un libro")
-        libro=input("Ingresa el libro que desea eliminar: ")
-        if libro in libros:
-            libros.remove()
+        for i in libros:
+            libro=input("Ingresa el libro que desea eliminar: ").lower()
+            if libro in libros:
+                libros.remove(libro)
+                del(libro)
+             
+
+def guardar_archivo():
+    if not libros:
+        print("No hay libros en la libreria")
+        return
+    
+                
+            
 
     

@@ -1,4 +1,5 @@
-#
+#ingresar libreria
+import csv
 import time
 import funcionesPython as funcion
 #Hecho por Benjamin Montoya, Vicente Ruiz y Benjamín Gonzalez
@@ -11,8 +12,10 @@ while True:
     print("4.- Elimina un libro.")
     print("5.- Guardar coleccion en un archivo.")
     print("6.- Salir del programa.")
-
-    opcion=int(input("Seleccione una opcion: "))
+    try:
+        opcion=int(input("Seleccione una opcion: "))
+    except ValueError:
+        print("Ingrese una opcion valida.")
     if (opcion==1):
         funcion.agregar_libro()
     elif (opcion==2):
