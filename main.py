@@ -1,8 +1,10 @@
+#
 import time
 import funcionesPython as funcion
-
+#Hecho por Benjamin Montoya, Vicente Ruiz y Benjamín Gonzalez
+#Menu de opciones
 while True:
-    print("---Bienvenido a la libreria DUOC---")
+    print("---Bienvenido a la Libreria DUOC---")
     print("1.- Agregar un libro.")
     print("2.- Ver todos los libros.")
     print("3.- Modificar libro.")
@@ -10,17 +12,17 @@ while True:
     print("5.- Guardar coleccion en un archivo.")
     print("6.- Salir del programa.")
 
-    opcion=input("Seleccione una opcion")
+    opcion=int(input("Seleccione una opcion: "))
     if (opcion==1):
-        funcion.agregar_libro
+        funcion.agregar_libro()
     elif (opcion==2):
-        funcion.ver_libros
+        funcion.ver_libros()
     elif (opcion==3):
-        funcion.modificar_libro
+        funcion.modificar_libro()
     elif (opcion==4):
-        funcion.eliminar_libro
+        funcion.eliminar_libro()
     elif (opcion==5):
-        funcion.guardar_archivo
+        funcion.guardar_archivo()
     elif (opcion==6):
         break
     else:
